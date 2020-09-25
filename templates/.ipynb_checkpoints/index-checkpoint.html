@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AAAAA</title>
+</head>
+<body>
+
+
+<header>
+   <h1>Web Scraping</h1>
+</header>
+
+<div id="demo">
+</div>
+
+ <form action="{{ url_for('predict')}}" method="post">
+ 
+  Lien * <br> <input type="text" name='lien' placeholder="Lien" /> 
+  <input type="button" id="add" value="Add input"/>
+
+  <!-- Dispaly input -->
+  <input type="text" id="num" name="num">
+
+ <button type="submit">Web scraping</button>
+ </form>
+
+<script>
+var num = 1;
+document.getElementById('add').addEventListener("click",addInput);
+
+function addInput(){
+
+var demo = document.getElementById('demo');
+demo.insertAdjacentHTML('beforeend','Baliz <br><input name="baliz'+num+'" type="text" placeholder="Nom de la balise" /></div><div class="form-holder" width: 18%;"><a class="form-label">      Class_name</a> <br><input name="class_name'+num+'" type="text" placeholder="classe name"  /> <br> Xpath <br> <input name="xpath'+num+'" type="text" placeholder="xpath"  /></div> <br>');
+ num++;
+ document.getElementById("num").value = num
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>  

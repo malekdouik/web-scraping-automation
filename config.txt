@@ -1,0 +1,6 @@
+[site 1]
+lien=https://www.bbc.com/news/world-europe-53802045
+baliz=['h3','h2']
+class_name=['bold-image-promo__title','blue-tit__title']
+
+[site 2]
